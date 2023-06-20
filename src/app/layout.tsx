@@ -1,13 +1,18 @@
 import Header from '@/components/base/Header'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+
 import Footer from '@/components/base/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin']
+})
+
 
 export const metadata = {
-  title: 'Marvel Heros',
-  description: 'Search Page of Marvel Heros',
+  title: 'Heróis Marvel',
+  description: 'Página de Busca dos Heróis Marvel',
 }
 
 export default function RootLayout({
@@ -17,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Header />
         {children}
         <Footer />

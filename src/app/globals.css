@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #fff;
+  --foreground-white: #fff;
+  --foreground-black: #000;
   --bg-primary: #000;
   --bg-secondary: #f4f4f4
 }
@@ -20,5 +21,15 @@ body {
 }
 
 main{
+  color: var(--foreground-black);
   background-color: var(--bg-secondary);
+}
+
+
+
+h3 { 
+    font-weight: 800;
+    font-stretch: normal;
+    font-size: 26px;
+    line-height: 1;
 }
