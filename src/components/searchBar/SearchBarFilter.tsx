@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { MagnifyingGlassIcon } from "./MagnifyingGlassIcon"
 
 import { Roboto_Condensed } from 'next/font/google'
+import CharactersList from "../charactersList/CharactersList"
 
 const robotoCondesed = Roboto_Condensed({
     weight: ['300', '400', '700'],
@@ -37,9 +38,12 @@ const InputSearch = styled.div`
 
 export default function SearchBarFilter() {
     return (
-        <InlineFilter>
-            <MagnifyingGlassIcon />
-            <InputSearch><input placeholder="PROCURAR" className={robotoCondesed.className}></input></InputSearch>
-        </InlineFilter>
+        <>
+            <InlineFilter>
+                <MagnifyingGlassIcon />
+                <InputSearch><input placeholder="PROCURAR" className={robotoCondesed.className}></input></InputSearch>
+            </InlineFilter>
+            <CharactersList />
+        </>
     )
 }
